@@ -3,7 +3,6 @@ package io.github.edsontofolo.todo.controller;
 import io.github.edsontofolo.todo.model.Todo;
 import io.github.edsontofolo.todo.repository.TodoRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -12,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/todos")
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class TodoController {
 
     private final TodoRepository todoRepository;
